@@ -330,7 +330,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Frame_0
+    - name: CharCubeTall_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -339,7 +339,7 @@ ScriptedImporter:
         width: 12
         height: 19
       spriteId: f7eff62184ee6064da6bde314fb7b6a8
-    - name: Frame_1
+    - name: CharCubeTall_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -348,7 +348,7 @@ ScriptedImporter:
         width: 12
         height: 18
       spriteId: b1e1899a8cc69294fa78bdf9571b3d26
-    - name: Frame_2
+    - name: CharCubeTall_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -357,7 +357,7 @@ ScriptedImporter:
         width: 12
         height: 17
       spriteId: 3b14c7b44262a534ab14414d45c3a30e
-    - name: Frame_3
+    - name: CharCubeTall_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -366,7 +366,7 @@ ScriptedImporter:
         width: 12
         height: 18
       spriteId: 5305f17459c37cf40a94514c81b14939
-    - name: Frame_4
+    - name: CharCubeTall_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -375,7 +375,7 @@ ScriptedImporter:
         width: 13
         height: 18
       spriteId: 4cc97412c2f2f804e8b7a129d0cc1877
-    - name: Frame_5
+    - name: CharCubeTall_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -384,7 +384,7 @@ ScriptedImporter:
         width: 12
         height: 18
       spriteId: 6bc08d59eff01bf418dfdec0d2f7fdd0
-    - name: Frame_6
+    - name: CharCubeTall_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -393,7 +393,7 @@ ScriptedImporter:
         width: 12
         height: 17
       spriteId: 9f234da3bd0c3a74898e95511ec00c8e
-    - name: Frame_7
+    - name: CharCubeTall_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -402,7 +402,7 @@ ScriptedImporter:
         width: 12
         height: 18
       spriteId: 249bda785330e9643966783948efcc6e
-    - name: Frame_8
+    - name: CharCubeTall_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -411,7 +411,7 @@ ScriptedImporter:
         width: 12
         height: 18
       spriteId: 41061e0ce4270704c98c38860f4abc76
-    - name: Frame_9
+    - name: CharCubeTall_Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:

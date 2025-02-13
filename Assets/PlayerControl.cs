@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Kecepatan gerakan pemain
+    public float speed = 5f; // Kecepatan gerakan pemain
     public GameObject bulletPrefab; // Prefab peluru
     public Transform shootingPoint; // Titik dari mana peluru ditembakkan
     public float fireRate = 0.1f; // Kecepatan tembakan
@@ -36,17 +36,9 @@ public class PlayerControl : MonoBehaviour
 
     void MovePlayer()
     {
-        // Mengambil posisi mouse dalam dunia
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0; // Set Z ke 0 agar tetap di bidang 2D
-
-        // Menghitung arah dan menggerakkan pemain
-        Vector3 direction = (mousePosition - transform.position).normalized;
-        transform.position += direction * moveSpeed * Time.deltaTime;
-
-        // Mengatur rotasi pemain agar menghadap ke arah mouse
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        float moveX = Input.GetAxis ("Horizontal") * speed * Time.deltaTime; 
+        float moveY = Input.GetAxis ("Vertical") * speed * Time.deltaTime; 
+        transform.Translate (new Vector3 (moveX, moveY, 0));
     }
 
     void Shoot()
