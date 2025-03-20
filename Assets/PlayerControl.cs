@@ -8,7 +8,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject bulletPrefab; // Prefab peluru
     public Transform shootingPoint; // Titik dari mana peluru ditembakkan
     public float fireRate = 0.1f; // Kecepatan tembakan
-
+    public float fireTimer = 0f; // Timer untuk membatasi tembakan
+    
     private float nextFireTime = 0f; // Waktu berikutnya bisa menembak
 
     // Update is called once per frame
@@ -17,28 +18,33 @@ public class PlayerControl : MonoBehaviour
         // Menggerakkan pemain
         MovePlayer();
 
+        // Mengarahkan pemain ke posisi mouse
+        AimPlayer();
+
         // Menembak jika tombol mouse ditekan
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && fireTimer <= 0f)
         {
-            if (Time.time >= nextFireTime)
-            {
-                Debug.Log("Menembak peluru!"); // Log untuk debugging
-                Shoot();
-                nextFireTime = Time.time + fireRate; // Atur waktu berikutnya bisa menembak
-            }
+            Shoot();
+            fireTimer = fireRate; // Atur waktu cooldown tembakan
         }
         else
         {
-            // Log saat tidak menembak untuk melihat apakah input mouse terdeteksi
-            Debug.Log("Tidak menembak");
+            fireTimer -= Time.deltaTime; // Mengurangi timer seiring berjalannya waktu
         }
     }
 
     void MovePlayer()
     {
-        float moveX = Input.GetAxis ("Horizontal") * speed * Time.deltaTime; 
-        float moveY = Input.GetAxis ("Vertical") * speed * Time.deltaTime; 
-        transform.Translate (new Vector3 (moveX, moveY, 0));
+        float moveX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        float moveY = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        transform.Translate(new Vector3(moveX, moveY, 0));
+    }
+
+    void AimPlayer()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        float angle = Mathf.Atan2(mousePos.y - transform.position.y, mousePos.x - transform.position.x) * Mathf.Rad2Deg;
+        transform.localRotation = Quaternion.Euler(0, 0, angle - 90f);
     }
 
     void Shoot()
