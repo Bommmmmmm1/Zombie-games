@@ -29,23 +29,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        body.velocity = axisMovement.normalized * speed;
-        CheckForFlipping();
+        body.linearVelocity = axisMovement.normalized * speed;
+        //CheckForFlipping();
     }
 
-    private void CheckForFlipping()
-    {
-        bool movingLeft = axisMovement.x < 0;
-        bool movingRight = axisMovement.x > 0;
 
-        if (movingLeft)
-        {
-            transform.localScale = new Vector3(-1f, transform.localScale.y);
-        }
+    // Note* Tidak Perlu 
 
-        if (movingRight)
-        {
-            transform.localScale = new Vector3(1f, transform.localScale.y);
-        }        
-    }
+    // private void CheckForFlipping()
+    // {
+    //     bool movingLeft = axisMovement.x < 0;
+    //     bool movingRight = axisMovement.x > 0;
+
+    //     if (movingLeft)
+    //     {
+    //         transform.localScale = new Vector3(-1f, transform.localScale.y);
+    //     }
+
+    //     if (movingRight)
+    //     {
+    //         transform.localScale = new Vector3(1f, transform.localScale.y);
+    //     }        
+    // }
 }

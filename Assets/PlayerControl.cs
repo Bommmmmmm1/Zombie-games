@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float speed = 5f; // Kecepatan gerakan pemain
+    //public float speed = 5f; // Kecepatan gerakan pemain
     public GameObject bulletPrefab; // Prefab peluru
     public Transform shootingPoint; // Titik dari mana peluru ditembakkan
     public float fireRate = 0.1f; // Kecepatan tembakan
@@ -16,7 +16,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         // Menggerakkan pemain
-        MovePlayer();
+        //MovePlayer();
 
         // Mengarahkan pemain ke posisi mouse
         AimPlayer();
@@ -33,12 +33,12 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void MovePlayer()
-    {
-        float moveX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        float moveY = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        transform.Translate(new Vector3(moveX, moveY, 0));
-    }
+    // void MovePlayer()
+    // {
+    //     float moveX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+    //     float moveY = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+    //     transform.Translate(new Vector3(moveX, moveY, 0));
+    // }
 
     void AimPlayer()
     {
@@ -54,6 +54,6 @@ public class PlayerControl : MonoBehaviour
 
         // Menambahkan kecepatan ke peluru
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = shootingPoint.up * 10f; // Sesuaikan kecepatan peluru
+        rb.linearVelocity = shootingPoint.up * 10f; // Sesuaikan kecepatan peluru
     }
 }
