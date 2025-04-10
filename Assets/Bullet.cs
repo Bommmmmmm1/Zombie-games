@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     {
         // Set the bullet's velocity based on the speed variable
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.up * speed; // Use the bullet's up direction for movement
+        rb.linearVelocity = transform.up * speed; // Use the bullet's up direction for movement
 
         Destroy(gameObject, lifetime); // Destroy bullet after a certain time
     }
