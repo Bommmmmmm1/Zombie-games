@@ -105,7 +105,6 @@ ScriptedImporter:
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -127,7 +126,6 @@ ScriptedImporter:
     pivot: {x: 0.50793654, y: -0.04464286}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -148,7 +146,6 @@ ScriptedImporter:
     pivot: {x: 0.5981308, y: -0.35714287}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
     rect:
       serializedVersion: 2
       x: 70
@@ -169,7 +166,6 @@ ScriptedImporter:
     pivot: {x: 0.4827586, y: -0.17582418}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -190,7 +186,6 @@ ScriptedImporter:
     pivot: {x: 0.4054054, y: -0.10185185}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
     rect:
       serializedVersion: 2
       x: 138
@@ -215,7 +210,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Frame_0
+    - name: House_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -224,7 +219,7 @@ ScriptedImporter:
         width: 126
         height: 112
       spriteId: f47af342364ebc04a8fc6a63ad3f2d33
-    - name: Frame_3
+    - name: House_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -233,7 +228,7 @@ ScriptedImporter:
         width: 107
         height: 42
       spriteId: 37f1f88f5a052b541a61778ffb5fc1ea
-    - name: Frame_2
+    - name: House_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -242,7 +237,7 @@ ScriptedImporter:
         width: 58
         height: 91
       spriteId: d08b99cba043ab2498ad75421b37311e
-    - name: Frame_1
+    - name: House_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:

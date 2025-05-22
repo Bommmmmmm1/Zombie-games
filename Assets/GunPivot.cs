@@ -46,7 +46,8 @@ void Shoot()
 
         GameObject bullet = Instantiate(Bullet, fire_point.position, fire_point.rotation);
         Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-        bulletRb.linearVelocity = fire_point.up * 10f;
+        bulletRb.velocity = fire_point.up * 10f;
+
 
         Debug.Log("Bullet instantiated at: " + bullet.transform.position); // Log bullet position
     }

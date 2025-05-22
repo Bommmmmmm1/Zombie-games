@@ -29,10 +29,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        body.linearVelocity = axisMovement.normalized * speed;
+        // Replace 'linearVelocity' with 'velocity'
+        body.velocity = axisMovement.normalized * speed; // Corrected line
         //CheckForFlipping();
     }
-
 
     // Note* Tidak Perlu 
 
